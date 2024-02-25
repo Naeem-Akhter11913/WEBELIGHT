@@ -1,5 +1,4 @@
 var jwt = require('jsonwebtoken');
-const secretKey = "#$%EW$rkjdfhsgwe"
 
 const isAdmin = (req, res, next) => {
     // const array = req.rawHeaders
@@ -12,7 +11,7 @@ const isAdmin = (req, res, next) => {
             message: "Token is Expire"
         })
     }
-    jwt.verify(toeknForDecode, secretKey, (err, decoded) => {
+    jwt.verify(toeknForDecode, process.env.secretKey, (err, decoded) => {
         if (err) {
             return res.status(401).json({ message: 'Token is invalid.' });
         }

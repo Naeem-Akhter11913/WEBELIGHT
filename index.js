@@ -4,6 +4,7 @@ const userRouter = require('./router/UserRoute');
 const todo = require('./router/todoRoute');
 
 const app = express();
+require('dotenv').config();
 
 // Body-parser middleware
 app.use(bodyParser.json());
