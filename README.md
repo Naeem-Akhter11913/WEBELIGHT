@@ -11,4 +11,4 @@ for CRUD
 
 
 
-total spen time : 3 hours
+total spent time : 3 hours
